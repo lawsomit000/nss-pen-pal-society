@@ -11,7 +11,7 @@ export const letterForm = () => {
             </div>
             <div>
                 <label for="letterText">Letter</label>
-                <textarea class="letterText" name="letterText" rows="5" cols="33"</textarea>
+                <textarea class="letterText" name="letterText" rows="5" cols="33"></textarea>
             </div>
             <div>
                 <label class="topics" for="topicChoices">Topics</label>
@@ -24,8 +24,7 @@ export const letterForm = () => {
                 <input class="topicInput" type="radio" name="Congratulations" value="Congratulations"/>
                 <label for="Congratulations">Congratulations</label>
                 <input class="topicInput" type="radio" name="Condolences" value="Condolences"/>
-                <label for="Condolences">Condolences</label>
-                
+                <label for="Condolences">Condolences</label>s
             </div>
             <div class="field">
                 <label class="recipient" for="recipientChoice">Recipient</label>

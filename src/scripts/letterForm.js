@@ -41,3 +41,13 @@ export const letterForm = () => {
     `
     return html
 }
+
+const mainContainer = document.querySelector("#container")
+
+mainContainer.addEventListener("click", clickEvent => {
+    if (clickEvent.target.class === "sendLetter") {
+        const from = document.querySelector("input[name='authorOptions']").value
+        const letter = document.querySelector("input[name='letterText']").value
+        const topic = document.querySelect("input[name='']") //not sure how to collect this value? 
+    }
+})

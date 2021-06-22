@@ -1,4 +1,5 @@
 import {letterForm } from "./letterForm.js"
+import {lettersSent} from "./lettersSent.js"
 
 export const penPal = () => { 
     return `
@@ -6,8 +7,9 @@ export const penPal = () => {
         <setion class="letterForm">
             ${letterForm()}
         </section>
-
-        <setion class="">
+        <h1>Letters</h1>
+        <section class="lettersSent">
+            ${lettersSent()}
         </section>
     `
 }

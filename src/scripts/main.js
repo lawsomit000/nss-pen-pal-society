@@ -1,17 +1,21 @@
 import {penPal} from "./penPal.js"
+import { fetchLetters } from "./dataAccess.js"
 
 const mainContainer = document.querySelector(".container")
 
-// const render = () => {
-//     fetchRequests().then(
-//         () => {
-//             mainContainer.innerHTML = penPal() 
-//         }
-//     )
-// }
-// render ()
-
 const render = () => {
-    mainContainer.innerHTML = penPal()
+    fetchLetters().then(
+        () => {
+            mainContainer.innerHTML = penPal() 
+        }
+    )
 }
-render()
+
+render ()
+
+mainContainer.addEventListener(
+    "stateChanged",
+    CustomEvent => {
+        render()
+    }
+)

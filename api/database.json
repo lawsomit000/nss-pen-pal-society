@@ -1,11 +1,12 @@
 {
     "letters": [
      {
-        "author": "" , 
-        "letterText": "",
-        "topic": "",
-        "recipient": "",
-        "sendDate": ""
+        "author": "Mary Angelon" , 
+        "letterText": "Hello World",
+        "topic": "Family",
+        "recipient": "MarkTwain",
+        "sendDate": "today",
+        "id": 1
      }
     ]
 }   

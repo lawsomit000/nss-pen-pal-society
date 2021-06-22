@@ -1,3 +1,5 @@
+import { sendLetters } from "./dataAccess.js"
+
 export const letterForm = () => {
     let html = `
         <section class="formFields">
@@ -13,7 +15,7 @@ export const letterForm = () => {
                 <label for="letterText">Letter</label>
                 <textarea class="letterText" name="letterText" rows="5" cols="33"></textarea>
             </div>
-            <div>
+            <div class="">
                 <label class="topics" for="topicChoices">Topics</label>
                 <input class="topicInput" type="radio" name="Business" value="Business"/>
                 <label for="Business">Business</label>
@@ -42,12 +44,26 @@ export const letterForm = () => {
     return html
 }
 
-const mainContainer = document.querySelector("#container")
+const mainContainer = document.querySelector(".container")
 
 mainContainer.addEventListener("click", clickEvent => {
     if (clickEvent.target.class === "sendLetter") {
         const from = document.querySelector("input[name='authorOptions']").value
         const letter = document.querySelector("input[name='letterText']").value
-        const topic = document.querySelect("input[name='']") //not sure how to collect this value? 
+        // const topicText = document.querySelector("input[name='']") //not sure how to collect this value?
+        const letterTo = document.querySelector("input [name='recipientOptions']".value)
+
+        //make an object out of the user input
+        const dataToSendToAPI = {
+            author: from,
+            letterText: letter,
+            topic: topicText,
+            recipient: letterTo,
+            // sendDate: ,
+        }
+
+        //send the data to API for permanent storage 
+        sendLetters(dataToSendToAPI)
     }
 })
+

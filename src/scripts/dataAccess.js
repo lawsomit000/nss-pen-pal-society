@@ -1,4 +1,4 @@
-let applicationState = {
+const applicationState = {
 }
 
 const mainContainer = document.querySelector(".container")

@@ -1,3 +1,5 @@
+//builds html for all letters sent
+
 import { getLetters } from "./dataAccess.js";
 
 export const lettersSent = () => {
@@ -7,7 +9,9 @@ export const lettersSent = () => {
         ${
             letters.map(letter => {
                 return `
-                <li class="listItem>${letter.author}
+                <li class="listItem"> Dear ${letter.recipient}, <br>
+                    ${letter.letterText}<br>
+                    Sincerly, ${letter.author}
                 </li>`
             }).join("")
         }

@@ -1,12 +1,29 @@
 {
-    "letters": [
-     {
-        "author": "Mary Angelon" , 
-        "letterText": "Hello World",
-        "topic": "Family",
-        "recipient": "MarkTwain",
-        "sendDate": "today",
-        "id": 1
-     }
-    ]
-}   
+  "letters": [
+    {
+      "author": "Mary Angelon",
+      "letterText": "Hello, I am excited to read your new book about fishing in the Ozarks. I hope that it comes out soon.",
+      "topic": "Family",
+      "recipient": "Mark Twain",
+      "id": 1
+    },
+    {
+      "author": "Maya Angelon",
+      "letterText": "Hello, how are you doing today? ",
+      "recipient": "Mark Twain",
+      "id": 2
+    },
+    {
+      "author": "Maya Angelon",
+      "letterText": "test",
+      "recipient": "Maya Angelon",
+      "id": 3
+    },
+    {
+      "author": "Maya Angelon",
+      "letterText": "Testing ",
+      "recipient": "Grace Hopper",
+      "id": 4
+    }
+  ]
+}

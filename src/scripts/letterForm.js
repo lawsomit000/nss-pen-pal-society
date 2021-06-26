@@ -23,7 +23,7 @@ export const letterForm = () => {
                     <label for="Business">Business</label>
                     <input class="topicInput" type="radio" name="Friendly" value="Friendly"/>
                     <label for="Friendly">Friendly</label>
-                    <input class="topicInput" type="radio" name="Family" value="Family/>
+                    <input class="topicInput" type="radio" name="Family" value="Family"/>
                     <label for="Family">Family</label>
                     <input class="topicInput" type="radio" name="Congratulations" value="Congratulations"/>
                     <label for="Congratulations">Congratulations</label>
@@ -55,7 +55,14 @@ mainContainer.addEventListener("click", clickEvent => {
         const fromSelectedIndex = document.getElementById('authorOptions').options.selectedIndex
         const from = document.getElementById('authorOptions').options[fromSelectedIndex].text
         const letter = document.getElementById('letterText').value
-        const topicChoices = document.querySelectorAll('.topicInput.c').value
+        const topicChoices = document.getElementsByClassName('topicInput')
+        const selectedChoices = []
+        for (const choice of topicChoices) {
+            if (choice.checked){
+                selectedChoices.push(choice.value)
+            }
+        }
+        debugger
         const letterToSelectedIndex = document.getElementById('recipientOptions').options.selectedIndex
         const letterTo = document.getElementById('recipientOptions').options[letterToSelectedIndex].text
         
@@ -63,8 +70,7 @@ mainContainer.addEventListener("click", clickEvent => {
         const dataToSendToAPI = {
             author: from,
             letterText: letter,
-            topic: topicChoices,
-            //need to figure out how to store all topicChoices into an array 
+            topic: selectedChoices,
             recipient: letterTo
         }
 

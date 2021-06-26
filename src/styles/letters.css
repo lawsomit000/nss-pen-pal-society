@@ -1,0 +1,13 @@
+.allLetters {
+    list-style-type: none;
+}
+.list {
+    width: 800px;
+}
+.listItem {
+    width: 96%;
+    background-color: lightcoral;
+    border: solid black;
+    margin: 10px;
+    padding: 10px; 
+}

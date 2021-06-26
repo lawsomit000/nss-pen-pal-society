@@ -9,10 +9,13 @@ export const lettersSent = () => {
         ${
             letters.map(letter => {
                 return `
-                <li class="listItem"> Dear ${letter.recipient}, <br>
-                    ${letter.letterText}<br>
-                    Sincerly, ${letter.author}
-                </li>`
+                <div class="list">
+                    <li class="listItem"> Dear ${letter.recipient}, <br>
+                        ${letter.letterText}<br>
+                        Sincerly, ${letter.author}
+                    </li>
+                </div>`
+        
             }).join("")
         }
     </ul>
